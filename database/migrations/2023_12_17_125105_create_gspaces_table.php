@@ -16,7 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users");
             $table->date("date");
-            $table->enum("rooms", ["Console Room", "PcGaming Rooms", "Arcade Rooms"]);
+            $table->time("time");
+            $table->enum("room", ["Console Room", "PcGaming Room", "Arcade Room"]);
             $table->timestamps();
         });
     }

@@ -23,6 +23,7 @@ Route::post("/register", [AuthController::class, "register"]);
 //this is auth guard for app that need authentication
 Route::group(["middleware" => ["auth:sanctum"]], function() {
     Route::get("/gspace", [GspaceController::class, "index"]);
+    Route::post("/gspace", [GspaceController::class, "store"]);
     Route::get("/gspace/{id}", [GspaceController::class, "show"]);
     Route::post("/logout", [AuthController::class, "logout"]); 
 });

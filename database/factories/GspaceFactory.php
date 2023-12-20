@@ -19,7 +19,8 @@ class GspaceFactory extends Factory
         return [
             "user_id" => fake()->randomElement(User::pluck("id")),
             "date" => fake()->dateTime(),
-            "rooms" => fake()->randomElement(["Console Room", "PcGaming Rooms", "Arcade Rooms"])
+            "time" => fake()->time(),
+            "room" => fake()->randomElement(["Console Room", "PcGaming Room", "Arcade Room"])
         ];
     }
 }
