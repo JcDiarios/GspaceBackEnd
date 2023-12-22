@@ -44,8 +44,6 @@ class GspaceController extends Controller
     
         $gspace->save();// Save the Gspace instance to the database
 
-        return $gspace;
-
         return response()->json(["message" => "Booking created successfully"], 201);// Return a response indicating success
 
     }
